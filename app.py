@@ -24,7 +24,7 @@ if st.button("Generate Roadmap"):
     with st.spinner("Generating..."):
         try:
             completion = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
+                model="openai/gpt-oss-20b",
                 messages=[{"role": "user", "content": f"Create a detailed {duration} learning roadmap for {topic} at {level} level. Include weekly breakdown, projects, and resources."}]
             )
             st.success("Roadmap Generated!")
