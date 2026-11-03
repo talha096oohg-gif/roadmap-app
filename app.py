@@ -26,7 +26,7 @@ if st.button("Generate Roadmap"):
         try:
             r = client.chat.completions.create(
                 messages=[{"role": "user", "content": prompt}],
-                model="llama-3.3-70b-versatile","
+                model="llama-3.3-70b-versatile",
             
             st.success("Roadmap generated!")
             st.markdown(r.choices[0].message.content)
